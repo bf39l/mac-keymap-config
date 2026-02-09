@@ -42,12 +42,36 @@ hs.hotkey.bind({"ctrl", "alt", "shift"}, "-", function()
 end)
 
 hs.hotkey.bind({"ctrl", "alt", "shift"}, "[", function()
-    winMonitor.To(winUtils.Direction.LEFT)
+    winMonitor.Cycle(winUtils.Direction.LEFT)
 end)
 
 hs.hotkey.bind({"ctrl", "alt", "shift"}, "]", function()
-    winMonitor.To(winUtils.Direction.RIGHT)
+    winMonitor.Cycle(winUtils.Direction.RIGHT)
 end)
+
+hs.hotkey.bind({"ctrl", "alt"}, "[", function()
+    winMonitor.CycleMouse(winUtils.Direction.LEFT)
+end)
+
+hs.hotkey.bind({"ctrl", "alt"}, "]", function()
+    winMonitor.CycleMouse(winUtils.Direction.RIGHT)
+end)
+
+-- hs.hotkey.bind({"ctrl", "alt", "shift"}, "[", function()
+--     winMonitor.To(winUtils.Direction.LEFT)
+-- end)
+
+-- hs.hotkey.bind({"ctrl", "alt", "shift"}, "]", function()
+--     winMonitor.To(winUtils.Direction.RIGHT)
+-- end)
+
+-- hs.hotkey.bind({"ctrl", "alt"}, "[", function()
+--     winMonitor.MoveMouse(winUtils.Direction.LEFT)
+-- end)
+
+-- hs.hotkey.bind({"ctrl", "alt"}, "]", function()
+--     winMonitor.MoveMouse(winUtils.Direction.RIGHT)
+-- end)
 
 --- ### Simulate typing text ###
 hs.hotkey.bind({"ctrl", "alt"}, "V", function()

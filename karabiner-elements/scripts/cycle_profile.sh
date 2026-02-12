@@ -7,7 +7,7 @@
 set -e
 
 # Set PATH to include necessary directories
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin"
 
 # Get current profile
 current_profile=$(karabiner_cli --show-current-profile-name)

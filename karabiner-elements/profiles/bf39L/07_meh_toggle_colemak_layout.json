@@ -1,0 +1,51 @@
+{
+    "description": "07 - Meh - Toggle Colemak Layout",
+    "manipulators": [
+        {
+            "conditions": [
+                {
+                    "name": "colemak_layout",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "tab",
+                "modifiers": { "mandatory": ["left_control", "left_option", "left_shift"] }
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "colemak_layout",
+                        "value": 1
+                    }
+                },
+                { "shell_command": "osascript -e 'display notification \"Colemak ON\" with title \"Karabiner\"'" }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "colemak_layout",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "tab",
+                "modifiers": { "mandatory": ["left_control", "left_option", "left_shift"] }
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "colemak_layout",
+                        "value": 0
+                    }
+                },
+                { "shell_command": "osascript -e 'display notification \"Colemak OFF\" with title \"Karabiner\"'" }
+            ],
+            "type": "basic"
+        }
+    ]
+}

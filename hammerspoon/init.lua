@@ -81,9 +81,13 @@ end)
 --- ### applications management ###
 hs.application.enableSpotlightForNameSearches(true)
 hs.hotkey.bind({"ctrl", "alt", "shift"}, "t", function()
-    apps.launchOrFocus("/Applications/iTerm.app")
+    apps.launchOrFocus("/Applications/Warp.app")
 end)
 
 hs.hotkey.bind({"ctrl", "alt", "shift"}, "b", function()
-    apps.launchOrFocus("/Applications/Firefox.app")
+    apps.launchOrFocus("/Applications/Brave Browser.app")
+end)
+
+hs.hotkey.bind({"ctrl", "alt", "shift"}, "a", function()
+    apps.launchOrFocus("/System/Applications/Apps.app")
 end)
